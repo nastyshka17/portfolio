@@ -1,0 +1,46 @@
+.softskills {
+  width: 100%;
+  display: grid;
+
+  // .softskills__title
+  &__title {
+    grid-column: 1 / -1;
+    align-self: center;
+
+    border-bottom: 2px solid #000;
+    text-transform: uppercase;
+
+    margin-bottom: 40px;
+  }
+
+  // .softskills__text
+
+  &__text {
+    margin-bottom: 5px;
+    text-transform: uppercase;
+
+    & progress {
+      width: 50%;
+      background-color: #f3f3f3;
+      height: 15px;
+      border-radius: 8px;
+      overflow: hidden;
+
+      &::-webkit-progress-bar {
+        background-color: #f3f3f3;
+        height: 15px;
+        border-radius: 8px
+      }
+
+      &::-webkit-progress-value {
+        background-color: $color-alpha;
+        height: 15px;
+        border-radius: 8px;
+
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12) inset;
+        transition: width 0.4s ease-in-out;
+        animation: fill 2s ease-in-out forwards;
+      }
+    }
+  }
+}
